@@ -6,7 +6,7 @@ png(filename = "plot2.png",
 columns <- c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric")
 
 # read in data
-data <- read.table("exdata-data-household_power_consumption/household_power_consumption.txt", sep=";", na.strings="?", header=TRUE, colClasses=columns, dec=".")
+data <- read.table("Data/household_power_consumption.txt", sep=";", na.strings="?", header=TRUE, colClasses=columns, dec=".")
 
 # add DateTime column
 data$DateTime <- strptime(paste(data$Date,data$Time), format="%d/%m/%Y %H:%M:%S")
